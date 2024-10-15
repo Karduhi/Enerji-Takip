@@ -1,0 +1,8 @@
+D:\Projeler\EnerjiTakip\BLL\bin\Debug\BLL.dll.config
+D:\Projeler\EnerjiTakip\BLL\bin\Debug\BLL.dll
+D:\Projeler\EnerjiTakip\BLL\bin\Debug\BLL.pdb
+D:\Projeler\EnerjiTakip\BLL\bin\Debug\EntityFramework.dll
+D:\Projeler\EnerjiTakip\BLL\bin\Debug\EntityFramework.xml
+D:\Projeler\EnerjiTakip\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Projeler\EnerjiTakip\BLL\obj\Debug\BLL.dll
+D:\Projeler\EnerjiTakip\BLL\obj\Debug\BLL.pdb

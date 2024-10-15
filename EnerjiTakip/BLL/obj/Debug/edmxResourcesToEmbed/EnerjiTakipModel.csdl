@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ENERJITAKIPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ENERJITAKIPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Binalar" EntityType="ENERJITAKIPModel.Binalar" />
+    <EntitySet Name="Enerji_Takip" EntityType="ENERJITAKIPModel.Enerji_Takip" />
+    <EntitySet Name="Kullanicilar" EntityType="ENERJITAKIPModel.Kullanicilar" />
+    <AssociationSet Name="FK_Enerji_Takip_Binalar" Association="ENERJITAKIPModel.FK_Enerji_Takip_Binalar">
+      <End Role="Binalar" EntitySet="Binalar" />
+      <End Role="Enerji_Takip" EntitySet="Enerji_Takip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enerji_Takip_Kullanicilar" Association="ENERJITAKIPModel.FK_Enerji_Takip_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Enerji_Takip" EntitySet="Enerji_Takip" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Binalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Bina_Adi" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Aktif" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Enerji_Takip" Relationship="ENERJITAKIPModel.FK_Enerji_Takip_Binalar" FromRole="Binalar" ToRole="Enerji_Takip" />
+  </EntityType>
+  <EntityType Name="Enerji_Takip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="fatura_turu" Type="Int32" Nullable="false" />
+    <Property Name="fatura_tarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fatura_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fatura_tutari" Type="Double" Nullable="false" />
+    <Property Name="aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="kaydeden_kullanici" Type="Int32" Nullable="false" />
+    <Property Name="kayit_tarihi" Type="DateTime" Precision="0" />
+    <Property Name="aktif" Type="Int32" Nullable="false" />
+    <Property Name="abone_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="yil" Type="Int32" />
+    <Property Name="donem" Type="Int32" />
+    <Property Name="butce_turu" Type="Int32" />
+    <Property Name="musteri_tarife_grup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ihale_durumu" Type="Int32" />
+    <Property Name="tek_cok_zamanli" Type="Int32" />
+    <Property Name="ilk_okuma_tarihi" Type="DateTime" Precision="0" />
+    <Property Name="son_okuma_tarihi" Type="DateTime" Precision="0" />
+    <Property Name="ortalama_kwh" Type="Int32" />
+    <Property Name="gun_ilk_endeks" Type="Int32" />
+    <Property Name="puantaj_ilk_endeks" Type="Int32" />
+    <Property Name="gece_ilk_endeks" Type="Int32" />
+    <Property Name="gun_son_endeks" Type="Int32" />
+    <Property Name="puantaj_son_endeks" Type="Int32" />
+    <Property Name="gece_son_endeks" Type="Int32" />
+    <Property Name="gun_fark" Type="Int32" />
+    <Property Name="puantaj_fark" Type="Int32" />
+    <Property Name="gece_fark" Type="Int32" />
+    <Property Name="gun_carpan" Type="Int32" />
+    <Property Name="puantaj_carpan" Type="Int32" />
+    <Property Name="gece_carpan" Type="Int32" />
+    <Property Name="gun_tuketim" Type="Int32" />
+    <Property Name="puantaj_tuketim" Type="Int32" />
+    <Property Name="gece_tuketim" Type="Int32" />
+    <Property Name="toplam_tuketim" Type="Int32" />
+    <Property Name="gun_birim_fiyati" Type="Int32" />
+    <Property Name="puantaj_birim_fiyati" Type="Int32" />
+    <Property Name="gece_birim_fiyati" Type="Int32" />
+    <Property Name="gun_toplam" Type="Int32" />
+    <Property Name="puantaj_toplam" Type="Int32" />
+    <Property Name="gece_toplam" Type="Int32" />
+    <Property Name="toplam_tutar" Type="Int32" />
+    <Property Name="trafo_kaybi_bedeli" Type="Int32" />
+    <Property Name="dagitim_bedeli" Type="Int32" />
+    <Property Name="ceza_bedeli" Type="Int32" />
+    <Property Name="iletisim_bedeli" Type="Int32" />
+    <Property Name="per_ok_bedeli" Type="Int32" />
+    <Property Name="per_sat_hiz_bedeli" Type="Int32" />
+    <Property Name="kk_bedeli" Type="Int32" />
+    <Property Name="toplam" Type="Int32" />
+    <Property Name="enerji_fonu" Type="Int32" />
+    <Property Name="trt_payi" Type="Int32" />
+    <Property Name="tuketim_vergisi" Type="Int32" />
+    <Property Name="gecikme_zammi" Type="Int32" />
+    <Property Name="kdv_matrahi" Type="Int32" />
+    <Property Name="kdv" Type="Int32" />
+    <Property Name="fiyat_farki" Type="Int32" />
+    <Property Name="yakit_turu" Type="Int32" />
+    <Property Name="kati_yakit_turu" Type="Int32" />
+    <Property Name="dogal_gaz_durumu" Type="Int32" />
+    <Property Name="alim_miktari" Type="Int32" />
+    <Property Name="birim_fiyati" Type="Int32" />
+    <Property Name="su_turu" Type="Int32" />
+    <Property Name="abone_tipi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tuketim_kredi" Type="Int32" />
+    <Property Name="ctv" Type="Int32" />
+    <Property Name="atik_su_bedeli" Type="Int32" />
+    <Property Name="atik_su_kdv" Type="Int32" />
+    <Property Name="su_bedeli" Type="Int32" />
+    <Property Name="bakim_ucreti" Type="Int32" />
+    <Property Name="diger_odemeler" Type="Int32" />
+    <Property Name="sayac_turu" Type="Int32" />
+    <Property Name="turu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanilan_mb" Type="Int32" />
+    <Property Name="atik_miktari" Type="Int32" />
+    <Property Name="dekont_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="serbest_tuketici" Type="Int32" />
+    <Property Name="kompanzasyon" Type="Int32" />
+    <Property Name="bina_id" Type="Int32" />
+    <NavigationProperty Name="Binalar" Relationship="ENERJITAKIPModel.FK_Enerji_Takip_Binalar" FromRole="Enerji_Takip" ToRole="Binalar" />
+    <NavigationProperty Name="Kullanicilar" Relationship="ENERJITAKIPModel.FK_Enerji_Takip_Kullanicilar" FromRole="Enerji_Takip" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Kullanici_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kullanici_Adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kullanici_Soyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aktif" Type="Int32" Nullable="false" />
+    <Property Name="Admin" Type="Int32" />
+    <NavigationProperty Name="Enerji_Takip" Relationship="ENERJITAKIPModel.FK_Enerji_Takip_Kullanicilar" FromRole="Kullanicilar" ToRole="Enerji_Takip" />
+  </EntityType>
+  <Association Name="FK_Enerji_Takip_Binalar">
+    <End Type="ENERJITAKIPModel.Binalar" Role="Binalar" Multiplicity="0..1" />
+    <End Type="ENERJITAKIPModel.Enerji_Takip" Role="Enerji_Takip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Binalar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Enerji_Takip">
+        <PropertyRef Name="bina_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enerji_Takip_Kullanicilar">
+    <End Type="ENERJITAKIPModel.Kullanicilar" Role="Kullanicilar" Multiplicity="1" />
+    <End Type="ENERJITAKIPModel.Enerji_Takip" Role="Enerji_Takip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Enerji_Takip">
+        <PropertyRef Name="kaydeden_kullanici" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

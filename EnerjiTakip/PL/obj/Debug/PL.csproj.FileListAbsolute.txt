@@ -1,0 +1,13 @@
+D:\Projeler\EnerjiTakip\PL\bin\Debug\PL.exe.config
+D:\Projeler\EnerjiTakip\PL\bin\Debug\PL.exe
+D:\Projeler\EnerjiTakip\PL\bin\Debug\PL.pdb
+D:\Projeler\EnerjiTakip\PL\bin\Debug\BLL.dll
+D:\Projeler\EnerjiTakip\PL\bin\Debug\EntityFramework.dll
+D:\Projeler\EnerjiTakip\PL\bin\Debug\BLL.pdb
+D:\Projeler\EnerjiTakip\PL\bin\Debug\BLL.dll.config
+D:\Projeler\EnerjiTakip\PL\bin\Debug\EntityFramework.xml
+D:\Projeler\EnerjiTakip\PL\obj\Debug\PL.csprojResolveAssemblyReference.cache
+D:\Projeler\EnerjiTakip\PL\obj\Debug\PL.Properties.Resources.resources
+D:\Projeler\EnerjiTakip\PL\obj\Debug\PL.csproj.GenerateResource.Cache
+D:\Projeler\EnerjiTakip\PL\obj\Debug\PL.exe
+D:\Projeler\EnerjiTakip\PL\obj\Debug\PL.pdb

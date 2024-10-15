@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ENERJITAKIPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Binalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Bina_Adi" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Aktif" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enerji_Takip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="fatura_turu" Type="int" Nullable="false" />
+    <Property Name="fatura_tarihi" Type="date" Nullable="false" />
+    <Property Name="fatura_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fatura_tutari" Type="float" Nullable="false" />
+    <Property Name="aciklama" Type="varchar" MaxLength="500" />
+    <Property Name="kaydeden_kullanici" Type="int" Nullable="false" />
+    <Property Name="kayit_tarihi" Type="date" />
+    <Property Name="aktif" Type="int" Nullable="false" />
+    <Property Name="abone_no" Type="varchar" MaxLength="20" />
+    <Property Name="yil" Type="int" />
+    <Property Name="donem" Type="int" />
+    <Property Name="butce_turu" Type="int" />
+    <Property Name="musteri_tarife_grup" Type="varchar" MaxLength="100" />
+    <Property Name="ihale_durumu" Type="int" />
+    <Property Name="tek_cok_zamanli" Type="int" />
+    <Property Name="ilk_okuma_tarihi" Type="date" />
+    <Property Name="son_okuma_tarihi" Type="date" />
+    <Property Name="ortalama_kwh" Type="int" />
+    <Property Name="gun_ilk_endeks" Type="int" />
+    <Property Name="puantaj_ilk_endeks" Type="int" />
+    <Property Name="gece_ilk_endeks" Type="int" />
+    <Property Name="gun_son_endeks" Type="int" />
+    <Property Name="puantaj_son_endeks" Type="int" />
+    <Property Name="gece_son_endeks" Type="int" />
+    <Property Name="gun_fark" Type="int" />
+    <Property Name="puantaj_fark" Type="int" />
+    <Property Name="gece_fark" Type="int" />
+    <Property Name="gun_carpan" Type="int" />
+    <Property Name="puantaj_carpan" Type="int" />
+    <Property Name="gece_carpan" Type="int" />
+    <Property Name="gun_tuketim" Type="int" />
+    <Property Name="puantaj_tuketim" Type="int" />
+    <Property Name="gece_tuketim" Type="int" />
+    <Property Name="toplam_tuketim" Type="int" />
+    <Property Name="gun_birim_fiyati" Type="int" />
+    <Property Name="puantaj_birim_fiyati" Type="int" />
+    <Property Name="gece_birim_fiyati" Type="int" />
+    <Property Name="gun_toplam" Type="int" />
+    <Property Name="puantaj_toplam" Type="int" />
+    <Property Name="gece_toplam" Type="int" />
+    <Property Name="toplam_tutar" Type="int" />
+    <Property Name="trafo_kaybi_bedeli" Type="int" />
+    <Property Name="dagitim_bedeli" Type="int" />
+    <Property Name="ceza_bedeli" Type="int" />
+    <Property Name="iletisim_bedeli" Type="int" />
+    <Property Name="per_ok_bedeli" Type="int" />
+    <Property Name="per_sat_hiz_bedeli" Type="int" />
+    <Property Name="kk_bedeli" Type="int" />
+    <Property Name="toplam" Type="int" />
+    <Property Name="enerji_fonu" Type="int" />
+    <Property Name="trt_payi" Type="int" />
+    <Property Name="tuketim_vergisi" Type="int" />
+    <Property Name="gecikme_zammi" Type="int" />
+    <Property Name="kdv_matrahi" Type="int" />
+    <Property Name="kdv" Type="int" />
+    <Property Name="fiyat_farki" Type="int" />
+    <Property Name="yakit_turu" Type="int" />
+    <Property Name="kati_yakit_turu" Type="int" />
+    <Property Name="dogal_gaz_durumu" Type="int" />
+    <Property Name="alim_miktari" Type="int" />
+    <Property Name="birim_fiyati" Type="int" />
+    <Property Name="su_turu" Type="int" />
+    <Property Name="abone_tipi" Type="varchar" MaxLength="100" />
+    <Property Name="tuketim_kredi" Type="int" />
+    <Property Name="ctv" Type="int" />
+    <Property Name="atik_su_bedeli" Type="int" />
+    <Property Name="atik_su_kdv" Type="int" />
+    <Property Name="su_bedeli" Type="int" />
+    <Property Name="bakim_ucreti" Type="int" />
+    <Property Name="diger_odemeler" Type="int" />
+    <Property Name="sayac_turu" Type="int" />
+    <Property Name="turu" Type="varchar" MaxLength="100" />
+    <Property Name="kullanilan_mb" Type="int" />
+    <Property Name="atik_miktari" Type="int" />
+    <Property Name="dekont_no" Type="varchar" MaxLength="20" />
+    <Property Name="serbest_tuketici" Type="int" />
+    <Property Name="kompanzasyon" Type="int" />
+    <Property Name="bina_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Kullanici_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kullanici_Adi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kullanici_Soyadi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Aktif" Type="int" Nullable="false" />
+    <Property Name="Admin" Type="int" />
+  </EntityType>
+  <Association Name="FK_Enerji_Takip_Binalar">
+    <End Role="Binalar" Type="Self.Binalar" Multiplicity="0..1" />
+    <End Role="Enerji_Takip" Type="Self.Enerji_Takip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Binalar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Enerji_Takip">
+        <PropertyRef Name="bina_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enerji_Takip_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="Enerji_Takip" Type="Self.Enerji_Takip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Enerji_Takip">
+        <PropertyRef Name="kaydeden_kullanici" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ENERJITAKIPModelStoreContainer">
+    <EntitySet Name="Binalar" EntityType="Self.Binalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enerji_Takip" EntityType="Self.Enerji_Takip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Enerji_Takip_Binalar" Association="Self.FK_Enerji_Takip_Binalar">
+      <End Role="Binalar" EntitySet="Binalar" />
+      <End Role="Enerji_Takip" EntitySet="Enerji_Takip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enerji_Takip_Kullanicilar" Association="Self.FK_Enerji_Takip_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Enerji_Takip" EntitySet="Enerji_Takip" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

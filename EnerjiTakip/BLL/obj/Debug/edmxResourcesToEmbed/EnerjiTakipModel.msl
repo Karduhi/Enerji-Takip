@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ENERJITAKIPModelStoreContainer" CdmEntityContainer="ENERJITAKIPEntities">
+    <EntitySetMapping Name="Binalar">
+      <EntityTypeMapping TypeName="ENERJITAKIPModel.Binalar">
+        <MappingFragment StoreEntitySet="Binalar">
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Bina_Adi" ColumnName="Bina_Adi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enerji_Takip">
+      <EntityTypeMapping TypeName="ENERJITAKIPModel.Enerji_Takip">
+        <MappingFragment StoreEntitySet="Enerji_Takip">
+          <ScalarProperty Name="bina_id" ColumnName="bina_id" />
+          <ScalarProperty Name="kompanzasyon" ColumnName="kompanzasyon" />
+          <ScalarProperty Name="serbest_tuketici" ColumnName="serbest_tuketici" />
+          <ScalarProperty Name="dekont_no" ColumnName="dekont_no" />
+          <ScalarProperty Name="atik_miktari" ColumnName="atik_miktari" />
+          <ScalarProperty Name="kullanilan_mb" ColumnName="kullanilan_mb" />
+          <ScalarProperty Name="turu" ColumnName="turu" />
+          <ScalarProperty Name="sayac_turu" ColumnName="sayac_turu" />
+          <ScalarProperty Name="diger_odemeler" ColumnName="diger_odemeler" />
+          <ScalarProperty Name="bakim_ucreti" ColumnName="bakim_ucreti" />
+          <ScalarProperty Name="su_bedeli" ColumnName="su_bedeli" />
+          <ScalarProperty Name="atik_su_kdv" ColumnName="atik_su_kdv" />
+          <ScalarProperty Name="atik_su_bedeli" ColumnName="atik_su_bedeli" />
+          <ScalarProperty Name="ctv" ColumnName="ctv" />
+          <ScalarProperty Name="tuketim_kredi" ColumnName="tuketim_kredi" />
+          <ScalarProperty Name="abone_tipi" ColumnName="abone_tipi" />
+          <ScalarProperty Name="su_turu" ColumnName="su_turu" />
+          <ScalarProperty Name="birim_fiyati" ColumnName="birim_fiyati" />
+          <ScalarProperty Name="alim_miktari" ColumnName="alim_miktari" />
+          <ScalarProperty Name="dogal_gaz_durumu" ColumnName="dogal_gaz_durumu" />
+          <ScalarProperty Name="kati_yakit_turu" ColumnName="kati_yakit_turu" />
+          <ScalarProperty Name="yakit_turu" ColumnName="yakit_turu" />
+          <ScalarProperty Name="fiyat_farki" ColumnName="fiyat_farki" />
+          <ScalarProperty Name="kdv" ColumnName="kdv" />
+          <ScalarProperty Name="kdv_matrahi" ColumnName="kdv_matrahi" />
+          <ScalarProperty Name="gecikme_zammi" ColumnName="gecikme_zammi" />
+          <ScalarProperty Name="tuketim_vergisi" ColumnName="tuketim_vergisi" />
+          <ScalarProperty Name="trt_payi" ColumnName="trt_payi" />
+          <ScalarProperty Name="enerji_fonu" ColumnName="enerji_fonu" />
+          <ScalarProperty Name="toplam" ColumnName="toplam" />
+          <ScalarProperty Name="kk_bedeli" ColumnName="kk_bedeli" />
+          <ScalarProperty Name="per_sat_hiz_bedeli" ColumnName="per_sat_hiz_bedeli" />
+          <ScalarProperty Name="per_ok_bedeli" ColumnName="per_ok_bedeli" />
+          <ScalarProperty Name="iletisim_bedeli" ColumnName="iletisim_bedeli" />
+          <ScalarProperty Name="ceza_bedeli" ColumnName="ceza_bedeli" />
+          <ScalarProperty Name="dagitim_bedeli" ColumnName="dagitim_bedeli" />
+          <ScalarProperty Name="trafo_kaybi_bedeli" ColumnName="trafo_kaybi_bedeli" />
+          <ScalarProperty Name="toplam_tutar" ColumnName="toplam_tutar" />
+          <ScalarProperty Name="gece_toplam" ColumnName="gece_toplam" />
+          <ScalarProperty Name="puantaj_toplam" ColumnName="puantaj_toplam" />
+          <ScalarProperty Name="gun_toplam" ColumnName="gun_toplam" />
+          <ScalarProperty Name="gece_birim_fiyati" ColumnName="gece_birim_fiyati" />
+          <ScalarProperty Name="puantaj_birim_fiyati" ColumnName="puantaj_birim_fiyati" />
+          <ScalarProperty Name="gun_birim_fiyati" ColumnName="gun_birim_fiyati" />
+          <ScalarProperty Name="toplam_tuketim" ColumnName="toplam_tuketim" />
+          <ScalarProperty Name="gece_tuketim" ColumnName="gece_tuketim" />
+          <ScalarProperty Name="puantaj_tuketim" ColumnName="puantaj_tuketim" />
+          <ScalarProperty Name="gun_tuketim" ColumnName="gun_tuketim" />
+          <ScalarProperty Name="gece_carpan" ColumnName="gece_carpan" />
+          <ScalarProperty Name="puantaj_carpan" ColumnName="puantaj_carpan" />
+          <ScalarProperty Name="gun_carpan" ColumnName="gun_carpan" />
+          <ScalarProperty Name="gece_fark" ColumnName="gece_fark" />
+          <ScalarProperty Name="puantaj_fark" ColumnName="puantaj_fark" />
+          <ScalarProperty Name="gun_fark" ColumnName="gun_fark" />
+          <ScalarProperty Name="gece_son_endeks" ColumnName="gece_son_endeks" />
+          <ScalarProperty Name="puantaj_son_endeks" ColumnName="puantaj_son_endeks" />
+          <ScalarProperty Name="gun_son_endeks" ColumnName="gun_son_endeks" />
+          <ScalarProperty Name="gece_ilk_endeks" ColumnName="gece_ilk_endeks" />
+          <ScalarProperty Name="puantaj_ilk_endeks" ColumnName="puantaj_ilk_endeks" />
+          <ScalarProperty Name="gun_ilk_endeks" ColumnName="gun_ilk_endeks" />
+          <ScalarProperty Name="ortalama_kwh" ColumnName="ortalama_kwh" />
+          <ScalarProperty Name="son_okuma_tarihi" ColumnName="son_okuma_tarihi" />
+          <ScalarProperty Name="ilk_okuma_tarihi" ColumnName="ilk_okuma_tarihi" />
+          <ScalarProperty Name="tek_cok_zamanli" ColumnName="tek_cok_zamanli" />
+          <ScalarProperty Name="ihale_durumu" ColumnName="ihale_durumu" />
+          <ScalarProperty Name="musteri_tarife_grup" ColumnName="musteri_tarife_grup" />
+          <ScalarProperty Name="butce_turu" ColumnName="butce_turu" />
+          <ScalarProperty Name="donem" ColumnName="donem" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="abone_no" ColumnName="abone_no" />
+          <ScalarProperty Name="aktif" ColumnName="aktif" />
+          <ScalarProperty Name="kayit_tarihi" ColumnName="kayit_tarihi" />
+          <ScalarProperty Name="kaydeden_kullanici" ColumnName="kaydeden_kullanici" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="fatura_tutari" ColumnName="fatura_tutari" />
+          <ScalarProperty Name="fatura_no" ColumnName="fatura_no" />
+          <ScalarProperty Name="fatura_tarihi" ColumnName="fatura_tarihi" />
+          <ScalarProperty Name="fatura_turu" ColumnName="fatura_turu" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="ENERJITAKIPModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Kullanici_Soyadi" ColumnName="Kullanici_Soyadi" />
+          <ScalarProperty Name="Kullanici_Adi" ColumnName="Kullanici_Adi" />
+          <ScalarProperty Name="Kullanici_id" ColumnName="Kullanici_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
